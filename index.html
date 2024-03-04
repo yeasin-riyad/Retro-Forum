@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en"data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro-Forum</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/f7c0cc6c14.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body class="container mulish">
+    <div class="w-full mx-auto lg:w-11/12">
+        <header>
+            <nav class="flex flex-col items-center  justify-between my-4 gap-y-3 lg:flex-row">
+                <h1 class=" text-4xl font-black">ReTro</h1>
+                <div class="flex gap-x-4" data-tip="Home">
+
+                    <div class="tooltip tooltip-bottom" data-tip="hello">
+                        <img  class=" bg-slate-100 rounded-full hover:bg-slate-400 cursor-pointer" src="images/Frame 2.png" alt="" srcset="">
+                    </div>
+
+                    <div class="tooltip tooltip-bottom" data-tip="edit">
+                        <img  class=" bg-slate-100 rounded-full hover:bg-slate-400 cursor-pointer" src="images/Frame 3.png" alt="" srcset="">
+                    </div>
+
+                    <div class="tooltip tooltip-bottom" data-tip="add">
+                        <img  class=" bg-slate-100 rounded-full hover:bg-slate-400 cursor-pointer" src="images/Frame 4.png" alt="" srcset="">
+                    </div>
+                    <div class="tooltip tooltip-bottom" data-tip="flag">
+                        <img  class=" bg-slate-100 rounded-full hover:bg-slate-400 cursor-pointer" src="images/Frame 5.png" alt="" srcset="">
+                    </div>
+
+                    
+
+
+
+
+
+
+
+                    <button class="btn btn-info text-white">Sign In</button>
+                </div>
+
+
+            </nav>
+
+            <!-- Header Background Image -->
+
+            <div class=" my-9 mx-auto">
+                
+                <div class="bg-[url('/images/pic.png')]  rounded-lg bg-no-repeat bg-origin-content bg-center bg-cover bg-gray-950 flex flex-col  items-center mx-auto space-y-6 sm:p-24 lg:flex-row p-2 gap-x-36  ">
+
+                    <div class="space-y-6 w-full lg:w-3/4 text-center ">
+                        <h1 class="text-6xl text-white ">Welcome to the <span class="text-indigo-400">ReTro</span> Forum</h1>
+
+                        <p class="text-[#ffffffcc] text-xl font-semibold ">Share your favorite opinion and win and up forum coffee mug!</p>
+
+                        <label class="input input-bordered flex items-center gap-2 w-4/5 mx-auto lg:w-1/2 ">
+                            <input id="search" type="text" class="grow" placeholder="Search" />
+                            <span id="Button" class="badge badge-info lg:py-4">Search</span>
+                          </label>
+
+                    </div>
+                    <div class="w-4/5 lg:w-2/5 text-2xl font-medium ">
+                        <div class="card  bg-base-100 shadow-xl  ">
+                            <div class="card-body">
+                                <div>
+                                    <div class="flex justify-between items-center">
+                                        <h1>Registered Users</h1>
+                                        <h1>01</h1>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <h1>Forum</h1>
+                                        <h1>05</h1>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <h1>Topics</h1>
+                                        <h1>02</h1>
+                                    </div>
+
+                                    <div class="flex justify-between">
+                                        <h1>Replies</h1>
+                                        <h1>05</h1>
+                                    </div>
+                                </div>
+                              
+                            </div>
+                          </div>
+
+                    </div>
+                    
+                  </div>
+
+                 
+            </div>
+                
+                
+            </div>
+
+            
+        </header>
+
+        <!-- Main Section -->
+        <main class="w-full mx-auto text-center lg:w-11/12">
+            <div class="my-6">
+                <h1 class="text-4xl font-black">Let’s Discuss</h1>
+                <p class="my-5 inter text-xl font-normal text-[#12132d99] w-4/5 mx-auto md:w-3/5 ">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+            </div>
+
+            <div id="first-loading">
+                <span class="loading loading-spinner loading-xs"></span>
+                <span class="loading loading-spinner loading-sm"></span>
+                <span class="loading loading-spinner loading-md"></span>
+                <span class="loading loading-spinner loading-lg"></span>
+            </div>
+
+
+            <!-- Dynamic Card From Api -->
+
+            <div id="" class="flex flex-col gap-x-7 lg:flex-row">
+                    <!-- Left-Area -->
+                <div id="card" class="w-full"></div>
+
+                    <!-- Right Area -->
+                <div id="child-card" class="w-full flex flex-col gap-y-1 my-10  lg:w-4/5">
+                    <div id="heading" class="hidden">
+                        <div class="card w-full bg-base-100 shadow-xl">
+                            <div class="card-body">
+                                <div class=" flex justify-between">
+                                    <h1 class="font-bold text-slate-900">Title</h1>
+                                    <div class="flex gap-x-3 items-center">
+                                        <i class="fas fa-check-double text-emerald-500"></i>
+                                        <h1>Mark as Read <span id="readCount">(0)</span></h1>
+                                    </div>
+
+                                    
+                                </div> 
+                            </div>
+                          </div>
+                    </div>
+
+                
+                  
+                </div>
+               
+
+
+                        
+              
+            </div>
+
+                <!-- Join Our Forum Section -->
+
+            <div class="mx-auto">
+                <div class="  rounded-lg bg-gray-950 flex flex-col  items-center mx-auto space-y-2 sm:p-24 lg:flex-row p-2 gap-x-36 ">
+                    <div class="flex  justify-between flex-col-reverse lg:flex-row">
+                        <div class="flex flex-col justify-center text-left gap-y-5 w-full lg:w-8/12 ">
+
+                            <h1 class="mulish text-white text-5xl font-black">Join Our Forum</h1>
+
+                            <p class="mulish text-xl font-semibold text-[#ffffffcc]">Share your favorite opinion and win and up forum coffee mug! Yes, you can run unit tests and view the results directly within the app.</p>
+                            <button class="btn btn-active btn-primary text-white w-1/2 mulish text-xl font-bold lg:w-1/4">Registered Now</button>
+
+
+                        </div>
+    
+                        <div>
+
+                            <img src="images/joinforum.png" alt="" srcset="">
+    
+                            
+                        </div>
+                    </div>
+                   
+
+
+
+                </div>
+
+
+                <!-- Latest Posts Section... -->
+
+
+                <div class="my-6">
+                    <h1 class="text-4xl font-black">Latest Posts</h1>
+                    <p class="my-5 inter text-xl font-normal text-[#12132d99] w-4/5 mx-auto md:w-3/5 ">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined . </p>
+                </div>
+
+                <div id="second-loading" class="pb-4">
+                    <span class="loading loading-spinner loading-xs"></span>
+                    <span class="loading loading-spinner loading-sm"></span>
+                    <span class="loading loading-spinner loading-md"></span>
+                    <span class="loading loading-spinner loading-lg"></span>
+                </div>
+
+
+                <div id="latestPost" class="flex flex-col justify-between mulish gap-3 lg:flex-row ">
+                    
+                </div>
+
+
+                <div>
+
+                </div>
+
+
+            </div>
+                
+
+            
+
+
+                   
+
+          
+
+            
+        </main>
+
+        
+
+
+    </div>
+
+
+    <script src="js/DataFetch.js"></script>
+
+</body>
+
+</html>
